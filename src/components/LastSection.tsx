@@ -25,8 +25,8 @@ const LastSection = () => {
             {
                 breakpoint: 1024,
                 settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
+                    slidesToShow: 4,
+                    slidesToScroll: 4,
                     infinite: true,
                     dots: true,
                 },
@@ -65,7 +65,7 @@ const LastSection = () => {
     return (
         <section
             className={
-                "flex flex-col justify-center  gap-4 gap-y-20 w-full px-5"
+                "flex flex-col justify-center 2xl:items-center gap-4 gap-y-20 w-full px-5 2xl:padding-container"
             }
         >
             {statusApi3.isLoading ? (
