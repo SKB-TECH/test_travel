@@ -1,0 +1,34 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+#pnpm test
+
+echo '🏗️👷 style, Verification de style et formattage avent la validation de votre commit'
+#check prettier requiments
+pnpm run check-format ||(
+    echo '🤢🤮🤢🤮 Ce problème est lié au style - Your styling looks disgusting. 🤢🤮🤢🤮
+              Prettier Check Failed. Run npm run format, add changes and try commit again.';
+      false;
+)
+
+#check eslint requiments
+pnpm run check-lint || (
+      echo '🤡😂❌🤡 Failed Type check. 🤡😂❌🤡
+                Are you seriously trying to write that? Make the changes required above.'
+        false;
+)
+
+#if all pass
+# If everything passes... Now we can commit
+echo '🤔🤔🤔🤔... Alright.... Code looks good to me Big Bro... Trying to build now. 🤔🤔🤔🤔'
+
+pnpm run build ||
+(
+    echo '❌👷🔨❌ Better call Big Bro... Because your build failed ❌👷🔨❌
+            Next build failed: View the errors above to see why.
+    '
+    false;
+)
+
+# If everything passes... Now we can commit
+echo '✅✅✅✅ You win this time Big Bro... I am committing this now. ✅✅✅✅'
