@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import logo from "../assets/lo.png";
 import logol from "../assets/gauchel.png";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
@@ -9,10 +9,21 @@ import { IoIosSearch } from "react-icons/io";
 
 const Navbar = () => {
     const [active, setActive] = useState(false);
+    const [isScroll, setIsScroll] = useState(false);
 
+    const listenScrollEvent = () => {
+        window.scrollY >= 85 ? setIsScroll(true) : setIsScroll(false);
+    };
+
+    useEffect(() => {
+        window.addEventListener("scroll", listenScrollEvent);
+        return () => {
+            window.removeEventListener("scroll", listenScrollEvent);
+        };
+    }, []);
     return (
         <div
-            className={`flex flex-row items-center justify-center padding-container fixed w-full h-16 lg:h-20  top-0 left-0 right-0 z-50  bg-white 
+            className={`flex flex-row items-center justify-center padding-container fixed w-full h-16 lg:h-20  top-0 left-0 right-0 z-50 ${isScroll && "border-b-2 shadow-lg"}  bg-white 
             `}
         >
             <div className="flex flex-row items-center justify-between  w-full h-full p-6">
