@@ -9,7 +9,7 @@ const CardSeconSection = ({ title, imageUrl }: contentCard) => {
     return (
         <div
             className={
-                "cursor-pointer  h-24 w-24 rounded-lg flex  flex-col justify-center items-center gap-1"
+                "cursor-pointer  h-14 w-14 rounded-lg flex  flex-col justify-center items-center gap-1"
             }
         >
             <Image

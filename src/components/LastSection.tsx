@@ -7,47 +7,8 @@ import { AppDispatch, RootState } from "@/settings/store";
 import { apiService } from "@/settings/services/api.service";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
 import CardLastSkleton from "@/components/sous_components/CardLastSkleton";
 const LastSection = () => {
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        centerMode: true,
-        gap: 100,
-        slidesToShow: 4,
-        slidesToScroll: 4,
-        // autoplay: true,
-        autoplaySpeed: 2000,
-        pauseOnHover: true,
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 4,
-                    slidesToScroll: 4,
-                    infinite: true,
-                    dots: true,
-                },
-            },
-            {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    initialSlide: 1,
-                },
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                },
-            },
-        ],
-    };
     const dispatch = useDispatch<AppDispatch>();
     const { statusApi3, api3_data } = useSelector(
         (state: RootState) => state.api3
@@ -65,7 +26,7 @@ const LastSection = () => {
     return (
         <section
             className={
-                "flex flex-col justify-center 2xl:items-center gap-4 gap-y-20 w-full px-5 2xl:padding-container"
+                "flex flex-col justify-center items-center gap-10  w-full px-5 padding-container"
             }
         >
             {statusApi3.isLoading ? (
@@ -74,27 +35,9 @@ const LastSection = () => {
                         "w-full flex flex-wrap items-center justify-center gap-5 p-5"
                     }
                 >
-                    { [
-                        1,
-                        2,
-                        34,
-                        5,
-                        6,
-                        7,
-                        8,
-                        9,
-                        0,
-                        22,
-                        33,
-                        44,
-                        55,
-                        66,
-                        77,
-                        77,
-                        88,
-                        19,
-                        97,
-                        300,
+                    {[
+                        1, 2, 34, 5, 6, 7, 8, 9, 0, 22, 33, 44, 55, 66, 77, 77,
+                        88, 19, 97, 300,
                     ].map((ite) => (
                         <CardLastSkleton key={ite} />
                     ))}
@@ -105,17 +48,23 @@ const LastSection = () => {
                         item.media?.length > 0 && (
                             <div
                                 className={
-                                    "flex flex-wrap xl:flex-nowrap  gap-15 w-full"
+                                    "flex flex-col lg:flex-row items-center justify-center  gap-15 w-full h-full lg:ml-16"
                                 }
                                 key={index}
                             >
-                                <h1 className="flex-none bold-16">
-                                    {item.media?.length > 0 && item?.title}
-                                </h1>
-                                <Slider
-                                    {...settings}
+                                <div className="flex flex-row lg:flex-col justify-between items-start w-full lg:w-36 h-72">
+                                    <h1 className="bold-16 text-black">
+                                        {item.media?.length > 0 && item?.title}
+                                    </h1>
+
+                                    <div className="flex   gap-5 ">
+                                        <a className={"text-2xl"}>{"<"}</a>
+                                        <a className={"text-2xl"}>{">"}</a>
+                                    </div>
+                                </div>
+                                <div
                                     className={
-                                        "flex flex-grow items-center justify-center w-full"
+                                        "carousel flex  items-center justify-center w-full gap-5"
                                     }
                                 >
                                     {statusApi3.isLoading
@@ -133,7 +82,7 @@ const LastSection = () => {
                                                   />
                                               )
                                           )}
-                                </Slider>
+                                </div>
                             </div>
                         )
                 )

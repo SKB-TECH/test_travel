@@ -7,3 +7,4 @@ export { default as Skeleton } from "./sous_components/CardApiSkleton";
 export { default as SecondSection } from "./SecondSection";
 export { default as CardSeconSection } from "./sous_components/CardSeconSection";
 export { default as SkletonSecond } from "./sous_components/CardSeconSectionSkeleton";
+export { default as CarouselHero } from "../components/CarouselHero";

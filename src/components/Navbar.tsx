@@ -9,9 +9,10 @@ import { IoIosSearch } from "react-icons/io";
 
 const Navbar = () => {
     const [active, setActive] = useState(false);
+
     return (
         <div
-            className={`flex flex-row items-center justify-center padding-container fixed w-full h-16 lg:h-20  top-0 left-0 right-0 z-50  bg-white border-b-2
+            className={`flex flex-row items-center justify-center padding-container fixed w-full h-16 lg:h-20  top-0 left-0 right-0 z-50  bg-white 
             `}
         >
             <div className="flex flex-row items-center justify-between  w-full h-full p-6">
@@ -38,18 +39,18 @@ const Navbar = () => {
                     >
                         <div
                             className={
-                                "flex items-center gap-5 w-[50%] p-2 border "
+                                "flex items-center gap-5 w-[65%] p-2 border rounded"
                             }
                         >
                             <div
                                 className={
-                                    "flex items-center gap-2 w-62 h-full"
+                                    "flex items-center gap-2 w-full h-full"
                                 }
                             >
                                 <IoIosSearch size={20} />
                                 <input
                                     className={
-                                        "outline-none border-none w-24 lg:w-72 border border-gray-300"
+                                        "outline-none border-none w-24 lg:w-full border border-gray-300 bg-white"
                                     }
                                     placeholder={"在网络上搜索您想要的文章"}
                                 />
@@ -104,15 +105,6 @@ const Navbar = () => {
                     </div>
                     <div className="my-4 border-b border-gray-300"></div>
                     <div className="flex flex-col py-4 gap-10 cursor-pointer">
-                        <select
-                            className={
-                                "outline-none border-none w-56 h-10 bg-inherit text-color-text text-lg"
-                            }
-                        >
-                            <option className={"bold-16"}>
-                                Trouver un evenemnet
-                            </option>
-                        </select>
                         <div>
                             <ul
                                 className={
@@ -142,7 +134,6 @@ const Navbar = () => {
                                 </li>
                             </ul>
                         </div>
-
                     </div>
                 </div>
             </div>

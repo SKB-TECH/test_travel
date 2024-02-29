@@ -12,7 +12,7 @@ const CardDetail = ({ title, imageUrl }: contentCard) => {
     return (
         <div
             className={
-                "relative flex flex-row w-[100%]  2xl:w-[700px] lg:w-[550px] h-72 bg-white rounded-lg border items-center  justify-around shadow hover:shadow-2xl cursor-pointer gap-5 px-5 bg-center bg-no-repeat bg-cover"
+                "flex flex-row w-[950px] h-72 border items-center   cursor-pointer  bg-center bg-no-repeat bg-cover"
             }
             style={{ backgroundImage: `url(${imageUrl})` }}
         >

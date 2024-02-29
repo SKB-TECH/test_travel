@@ -12,7 +12,7 @@ const CardLast = ({ title, heure, img, date }: contentCard) => {
     return (
         <div
             className={
-                "relative flex flex-col w-[98%]  2xl:w-60 lg:w-56 lg:h-72 bg-white rounded-lg border shadow hover:shadow-2xl cursor-pointer gap-3 h-full"
+                "relative carousel-item flex flex-col w-[98%] lg:w-52 lg:h-72 bg-white rounded-lg border shadow hover:shadow-2xl cursor-pointer gap-3 h-full"
             }
         >
             <div className={" h-[50%] rounded-tr-lg rounded-tl-lg"}>

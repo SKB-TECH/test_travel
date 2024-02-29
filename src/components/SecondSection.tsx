@@ -23,13 +23,14 @@ const SecondSection = () => {
             isSend = false;
         };
     }, [dispatch]);
+    console.log(api2_data);
     return (
         <section
             className={"flex flex-col padding-container  gap-5 w-full h-full"}
         >
             <div
                 className={
-                    "flex flex-row flex-wrap items-center justify-center w-full gap-5 lg:gap-10 h-full"
+                    "flex flex-row flex-wrap items-center justify-center w-full gap-2 lg:gap-10 h-full"
                 }
             >
                 {statusApi2.isLoading
