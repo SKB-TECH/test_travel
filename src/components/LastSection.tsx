@@ -26,7 +26,7 @@ const LastSection = () => {
     return (
         <section
             className={
-                "flex flex-col justify-center items-center gap-10  w-full px-5 padding-container"
+                "flex flex-col justify-center items-center lg:gap-10  w-full px-5 padding-container"
             }
         >
             {statusApi3.isLoading ? (
@@ -48,11 +48,11 @@ const LastSection = () => {
                         item.media?.length > 0 && (
                             <div
                                 className={
-                                    "flex flex-col lg:flex-row items-center justify-center  gap-15 w-full h-full lg:ml-16"
+                                    "flex flex-col lg:flex-row items-center justify-center  lg:gap-15 w-full lg:h-full lg:ml-16"
                                 }
                                 key={index}
                             >
-                                <div className="flex flex-row lg:flex-col justify-between items-start w-full lg:w-36 h-72">
+                                <div className="flex flex-row lg:flex-col justify-between items-start w-full lg:w-36 lg:h-72">
                                     <h1 className="bold-16 text-black">
                                         {item.media?.length > 0 && item?.title}
                                     </h1>
