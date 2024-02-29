@@ -86,18 +86,18 @@ const CarouselHero = () => {
 
             {!statusApi1?.isLoading && (
                 <div
-                    className={`${!isScroll & !statusApi1.isLoading && "fixed "} w-[85%] lg:w-[250px] flex items-center justify-center transform  -translate-y-1/2 lg:left-1/2 right-5 top-52 gap-56`}
+                    className={`${!isScroll & !statusApi1.isLoading && "fixed "} w-[85%] lg:w-[400px] flex items-center justify-center lg:gap-96 transform  -translate-y-1/2 lg:left-1/2 right-5 top-52 gap-56`}
                 >
                     <a
                         href={`#slide${currentIndex}`}
-                        className="btn rounded-full bg-[#9c9c9c] border-none text-white hover:bg-[#9c9c9c] font-bold"
+                        className="lg:-ml-96 btn rounded-full bg-[#9c9c9c] border-none text-white hover:bg-[#9c9c9c] font-bold"
                         onClick={handlePrevClick}
                     >
                         ❮
                     </a>
                     <a
                         href={`#slide${currentIndex}`}
-                        className="btn rounded-full bg-[#9c9c9c] border-none text-white hover:bg-[#9c9c9c] font-bold"
+                        className="lg:ml-44 btn rounded-full bg-[#9c9c9c] border-none text-white hover:bg-[#9c9c9c] font-bold"
                         onClick={handleNextClick}
                     >
                         ❯
