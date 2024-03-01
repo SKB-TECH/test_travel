@@ -77,8 +77,8 @@ const LastSection = () => {
                                                       key={index}
                                                       title={item.fileName}
                                                       img={item?.uri}
-                                                      date={item?.collectionId}
-                                                      heure={item.seq}
+                                                      price={item?.collectionId}
+                                                      seq={item.seq}
                                                   />
                                               )
                                           )}

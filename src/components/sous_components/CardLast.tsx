@@ -4,13 +4,13 @@ import { GiReturnArrow } from "react-icons/gi";
 
 interface contentCard {
     title?: string;
-    date?: string;
+    seq?: number;
     isFree?: boolean;
-    heure?: string;
+    price?: number;
     img?: string;
     lieu?: string;
 }
-const CardLast = ({ title, heure, img, date }: contentCard) => {
+const CardLast = ({ title, seq, img, price }: contentCard) => {
     return (
         <div
             className={
@@ -20,7 +20,7 @@ const CardLast = ({ title, heure, img, date }: contentCard) => {
             <div className={" h-[50%] rounded-tr-lg rounded-tl-lg"}>
                 <Image
                     src={img ? img : ""}
-                    alt={"Affiche de l'evenement"}
+                    alt={"광고 이미지"}
                     width={300}
                     height={400}
                     className={
@@ -32,16 +32,13 @@ const CardLast = ({ title, heure, img, date }: contentCard) => {
                 <div
                     className={"w-full flex items-center justify-between gap-3"}
                 >
-                    <h4 className={"text-black text-[12px]"}>
+                    <h4 className={"text-black text-[16px]"}>
                         {title?.split(".")}
                     </h4>
                 </div>
-                <div
-                    className={"w-full flex items-center justify-between gap-1"}
-                >
-                    <h6 className={"bold-16"}>{date}</h6>
-                    <div className={"border border-l-2 border-black  h-full"} />
-                    <span className={"bold-16"}>{heure}%</span>
+                <div className={"w-full flex items-center gap-1"}>
+                    <h6 className={"txet-[16px] text-red-500"}>{seq}%</h6>
+                    <span className={"txet-[16px] text-black"}>{price}</span>
                 </div>
                 <div className="absolute top-28 mb-3 rounded flex items-center justify-center gap-1 p-2 w-24 text-white h-3 bg-[#3f9f8a]">
                     <GiReturnArrow size={10} color="#ffffff" />{" "}
