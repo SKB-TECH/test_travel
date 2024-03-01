@@ -23,7 +23,7 @@ const Navbar = () => {
     }, []);
     return (
         <div
-            className={`flex flex-row items-center justify-center padding-container fixed w-full h-16 lg:h-20  top-0 left-0 right-0 z-50 ${isScroll && "border-b-2 shadow-lg"}  bg-white 
+            className={`flex flex-row items-center justify-center padding-container fixed w-full h-16 lg:h-20  top-0 left-0 right-0 z-50 ${isScroll && "border-b-2 "}  bg-white 
             `}
         >
             <div className="flex flex-row items-center justify-between  w-full h-full p-6">

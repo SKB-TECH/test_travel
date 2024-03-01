@@ -48,7 +48,7 @@ const LastSection = () => {
                         item.media?.length > 0 && (
                             <div
                                 className={
-                                    "flex flex-col lg:flex-row items-center justify-center  lg:gap-15 w-full lg:h-full lg:ml-16"
+                                    "flex flex-col lg:flex-row items-center justify-center 2xl:gap-5 lg:gap-15 w-full lg:h-full lg:ml-16"
                                 }
                                 key={index}
                             >
