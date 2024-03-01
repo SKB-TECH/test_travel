@@ -75,7 +75,7 @@ const LastSection = () => {
                                               (item, index: number) => (
                                                   <CardLast
                                                       key={index}
-                                                      title={item.type}
+                                                      title={item.fileName}
                                                       img={item?.uri}
                                                       date={item?.collectionId}
                                                       heure={item.seq}

@@ -1,5 +1,7 @@
 import React from "react";
 import Image from "next/image";
+import { GiReturnArrow } from "react-icons/gi";
+
 interface contentCard {
     title?: string;
     date?: string;
@@ -30,7 +32,9 @@ const CardLast = ({ title, heure, img, date }: contentCard) => {
                 <div
                     className={"w-full flex items-center justify-between gap-3"}
                 >
-                    <h3 className={"bold-16"}>{title}</h3>
+                    <h4 className={"text-black text-[12px]"}>
+                        {title?.split(".")}
+                    </h4>
                 </div>
                 <div
                     className={"w-full flex items-center justify-between gap-1"}
@@ -38,6 +42,10 @@ const CardLast = ({ title, heure, img, date }: contentCard) => {
                     <h6 className={"bold-16"}>{date}</h6>
                     <div className={"border border-l-2 border-black  h-full"} />
                     <span className={"bold-16"}>{heure}%</span>
+                </div>
+                <div className="absolute top-28 mb-3 rounded flex items-center justify-center gap-1 p-2 w-24 text-white h-3 bg-[#3f9f8a]">
+                    <GiReturnArrow size={10} color="#ffffff" />{" "}
+                    <p className="text-sm">복귀 가능</p>
                 </div>
             </div>
         </div>

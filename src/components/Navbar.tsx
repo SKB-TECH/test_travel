@@ -127,21 +127,21 @@ const Navbar = () => {
                                         "cursor-pointer hover:text-color-text text-[16px]"
                                     }
                                 >
-                                    Home
+                                    집
                                 </li>
                                 <li
                                     className={
                                         "cursor-pointer hover:text-color-text text-[16px]"
                                     }
                                 >
-                                    Product
+                                    제품
                                 </li>
                                 <li
                                     className={
                                         "cursor-pointer hover:text-color-text text-[16px]"
                                     }
                                 >
-                                    Contact us
+                                    문의하기
                                 </li>
                             </ul>
                         </div>
